@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css'; // Import your CSS file for styling
 
 const DocumentEditorApp = () => {
+  const [viewMode, setViewMode] = useState('tile'); // State for toggling view modes
   const projects = [
     { name: "Assignment 1", time: "1m ago" },
     { name: "Lab 3", time: "40m ago" },
@@ -20,7 +21,12 @@ const DocumentEditorApp = () => {
   const user = {
     name: "Cole Gawin",
     email: "colegawin@gmail.com"
-  }
+  };
+
+  // Toggle between tile and list view
+  const toggleView = (view) => {
+    setViewMode(view);
+  };
 
   return (
     <div className="document-editor-container">
@@ -71,13 +77,34 @@ const DocumentEditorApp = () => {
             </div>
           </div>
         </div>
+
+        {/* View Toggle Icons */}
         <div className="all-projects">
-          <h2 className="all-projects-title">All Projects</h2>
-          <div className="project-grid">
+          <div className="projects-header">
+            <h2 className="all-projects-title">All Projects</h2>
+            <div className="view-toggle">
+              <img
+                src="/view-grid.svg" 
+                alt="Tile View" 
+                onClick={() => toggleView('tile')} 
+                className={`toggle-icon ${viewMode === 'tile' ? 'active' : ''}`} 
+              />
+              <img
+                src="/list-view.svg" 
+                alt="List View" 
+                onClick={() => toggleView('list')} 
+                className={`toggle-icon ${viewMode === 'list' ? 'active' : ''}`}
+              />
+            </div>
+          </div>
+          <div className={`project-grid ${viewMode}`}>
             {projects.map((project, index) => (
-              <div key={index} className="project-card">
+              <div key={index} className={`project-card ${viewMode}`}>
                 <div className="project-icon">
-                  <img src="/document-icon.svg" alt="document icon" />
+                  <img 
+                    src={viewMode === 'tile' ? "/document-icon.svg" : "/file-document.svg"} 
+                    alt="document icon" 
+                  />
                 </div>
                 <div className="project-details">
                   <p className="project-name">{project.name}</p>
