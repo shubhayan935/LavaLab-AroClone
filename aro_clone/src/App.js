@@ -18,8 +18,8 @@ const DocumentEditorApp = () => {
   ];
 
   const user = {
-    name: "Cole Gavin",
-    email: "colegavin@gmail.com"
+    name: "Cole Gawin",
+    email: "colegawin@gmail.com"
   }
 
   return (
