@@ -102,7 +102,6 @@ nav ul li img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
   border-bottom: 1px solid #ddd;
   margin-bottom: 20px;
   padding: 20px 20px 30px 40px;
@@ -112,10 +111,11 @@ nav ul li img {
   position: relative;
   width: 100%;
   margin-right: 80px;
-  height: 60px;
+  height: 56px;
 }
 
 .search-bar {
+  top: 0;
   width: 100%;
   padding: 0 20px 0 40px;
   border: 2px solid #CACACA;
@@ -141,7 +141,7 @@ nav ul li img {
   padding: 10px 20px;
   border-radius: 5px;
   /* background-color: #f9f9f9; */
-  height: 40px;
+  height: 38px;
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 4px 0px #00000033;
       box-shadow: 0px 0px 4px 0px #00000033;
