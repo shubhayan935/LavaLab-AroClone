@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import './App.css'; // Import your CSS file for styling
+import './App.css';
 
-const DocumentEditorApp = () => {
-  const [viewMode, setViewMode] = useState('tile'); // State for toggling view modes
-  const [activePage, setActivePage] = useState('All projects'); // State for tracking the active page
-  const [searchQuery, setSearchQuery] = useState(''); // State for search query
+const AroHome = () => {
+  const [viewMode, setViewMode] = useState('tile');
+  const [activePage, setActivePage] = useState('All projects');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const projects = [
     { name: "Assignment 1", time: "1m ago" },
@@ -21,29 +21,28 @@ const DocumentEditorApp = () => {
     { name: "Assignment 3", time: "Feb 20, 2023" },
   ];
 
+  
   const user = {
     name: "Cole Gawin",
     email: "colegawin@gmail.com"
   };
+  
+  // In production, this would be dynamically fetching this data directly from the database
 
-  // Toggle between tile and list view
   const toggleView = (view) => {
     setViewMode(view);
   };
 
-  // Set active page
   const handlePageChange = (page) => {
     setActivePage(page);
   };
 
-  // Filter projects based on the search query
   const filteredProjects = projects.filter(project =>
     project.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <div className="document-editor-container">
-      {/* Sidebar */}
       <div className="sidebar">
         <div className="logo">
           <img src="/aro-logo.svg" alt="ARO logo" />
@@ -90,7 +89,6 @@ const DocumentEditorApp = () => {
         <button className="new-project-button">+ New</button>
       </div>
 
-      {/* Main content */}
       <div className="main-content">
         <div className="top-bar">
           <div className="search-wrapper">
@@ -112,7 +110,6 @@ const DocumentEditorApp = () => {
           </div>
         </div>
 
-        {/* View Toggle Icons */}
         <div className="all-projects">
           <div className="projects-header">
             <h2 className="all-projects-title">All Projects</h2>
@@ -148,7 +145,7 @@ const DocumentEditorApp = () => {
                 </div>
               ))
             ) : (
-              <p>No projects found</p> /* Display a message if no projects match the search */
+              <p>No documents found</p>
             )}
           </div>
         </div>
@@ -157,4 +154,4 @@ const DocumentEditorApp = () => {
   );
 };
 
-export default DocumentEditorApp;
+export default AroHome;
