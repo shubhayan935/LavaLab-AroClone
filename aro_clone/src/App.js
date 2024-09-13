@@ -13,6 +13,12 @@ const DocumentEditorApp = () => {
     { name: "Worksheet 2", time: "Apr 25, 2024" },
     { name: "Resume", time: "March 27, 2023" },
     { name: "Assignment 3", time: "Feb 20, 2023" },
+    { name: "Assignment 1", time: "1m ago" },
+    { name: "Lab 3", time: "40m ago" },
+    { name: "Workbook Ch. 3", time: "2 hrs ago" },
+    { name: "Worksheet 2", time: "Apr 25, 2024" },
+    { name: "Resume", time: "March 27, 2023" },
+    { name: "Assignment 3", time: "Feb 20, 2023" },
   ];
 
   const user = {

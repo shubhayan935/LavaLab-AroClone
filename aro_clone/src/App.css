@@ -21,7 +21,7 @@
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
-  transition: 0.1s;
+  /* transition: 0.1s; */
 }
 
 .sidebar ul li:hover {
@@ -111,9 +111,9 @@ nav ul li img {
 .search-bar {
   width: 100%;
   padding: 0 20px 0 40px;
-  border: 1px solid #ddd;
+  border: 2px solid #CACACA;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   height: 100%;
   font-size: 16px;
 }
@@ -130,11 +130,14 @@ nav ul li img {
 .user-info {
   display: flex;
   align-items: center;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   height: 40px;
+  -webkit-box-shadow: 0px 0px 4px 0px #00000033;
+      box-shadow: 0px 0px 4px 0px #00000033;
+
 }
 
 .user-avatar {
