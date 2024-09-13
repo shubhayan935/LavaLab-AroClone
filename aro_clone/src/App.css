@@ -199,7 +199,7 @@ nav ul li img {
 
 /* All Projects */
 .all-projects {
-  padding: 40px;
+  padding: 40px 40px 40px 60px;
 }
 
 .projects-header {
@@ -217,6 +217,18 @@ nav ul li img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .project-grid.tile {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-grid.tile {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for small screens */
+  }
 }
 
 /* List view */
@@ -273,6 +285,7 @@ nav ul li img {
 
 .project-icon img {
   width: 100%;
+  object-fit: contain;
 }
 
 .project-details {
