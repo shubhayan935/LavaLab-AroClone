@@ -7,18 +7,18 @@ const AroHome = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const projects = [
-    { name: "Assignment 1", time: "1m ago" },
-    { name: "Lab 3", time: "40m ago" },
-    { name: "Workbook Ch. 3", time: "2 hrs ago" },
-    { name: "Worksheet 2", time: "Apr 25, 2024" },
-    { name: "Resume", time: "March 27, 2023" },
-    { name: "Assignment 3", time: "Feb 20, 2023" },
-    { name: "Assignment 1", time: "1m ago" },
-    { name: "Lab 3", time: "40m ago" },
-    { name: "Workbook Ch. 3", time: "2 hrs ago" },
-    { name: "Worksheet 2", time: "Apr 25, 2024" },
-    { name: "Resume", time: "March 27, 2023" },
-    { name: "Assignment 3", time: "Feb 20, 2023" },
+    { name: "Marketing Plan Q4", time: "10m ago" },
+    { name: "Client Proposal", time: "15m ago" },
+    { name: "Presentation Deck", time: "17m ago" },
+    { name: "Client Proposal Draft", time: "20m ago" },
+    { name: "Team Meeting Notes", time: "30m ago" },
+    { name: "Team Meeting Agenda", time: "45m ago" },
+    { name: "Budget Review 2024", time: "1 hr ago" },
+    { name: "Research Paper Draft", time: "2 hrs ago" },
+    { name: "Project Roadmap", time: "3 hrs ago" },
+    { name: "Marketing Plan Q3", time: "April 12, 2024" },
+    { name: "Client Contract Agreement", time: "March 8, 2024" },
+    { name: "Resume Update", time: "February 1, 2024" },
   ];
 
   
