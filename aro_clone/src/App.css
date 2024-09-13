@@ -13,6 +13,35 @@
   justify-content: space-between;
 }
 
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  margin: 6px 5px;
+  padding: 7px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.sidebar ul li:hover {
+  background-color: #d9d9d9;
+}
+
+.sidebar ul li.active {
+  background: #C1C1D08C;
+  color:#34347B;
+  font-weight: bold; /* Highlight active text */
+}
+
+.sidebar ul li.active img {
+  filter: invert(21%) sepia(59%) saturate(802%) hue-rotate(204deg) brightness(93%) contrast(98%);
+}
+
+.sidebar ul li img {
+  margin-right: 10px;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -148,11 +177,13 @@ nav ul li img {
   height: 30px;
   cursor: pointer;
   margin-right: 10px;
-  border: 2px solid #fff;
+  padding: 3px;
+  /* border: 2px solid #fff; */
 }
 
 .toggle-icon.active {
-  border: 2px solid #34347B;
+  /* border: 2px solid #34347B; */
+  background-color: #ebebeb;
   border-radius: 4px;
 }
 
@@ -191,18 +222,43 @@ nav ul li img {
   cursor: pointer;
 }
 
-.project-card.list{
-  border: 1.5px solid #ddd;
+.project-card.list {
+  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px 15px;
   display: flex;
-  /* justify-content: space-between; */
+  align-items: center; /* Align items in the center */
+  justify-content: space-between;
   cursor: pointer;
   margin-bottom: 10px;
 }
 
-.project-card.list .project-details{
+.project-card.list .project-icon {
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  width: 40px; /* Make the icon smaller */
+}
+
+.project-grid :hover{
+  background: #f0f0f0;
+}
+
+.project-card.list .project-details {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-left: 20px;
+}
+
+.project-card.list .project-name {
+  font-weight: bold;
+  /* flex-grow: 1; */
+}
+
+.project-card.list .project-time {
+  color: #888;
+  /* text-align: right; */
+  white-space: nowrap; /* Prevent the time from wrapping */
 }
 
 .project-icon img {
@@ -210,7 +266,7 @@ nav ul li img {
 }
 
 .project-details {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   text-align: left;
 }
 
